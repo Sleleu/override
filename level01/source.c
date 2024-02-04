@@ -24,26 +24,24 @@ int main(int argc, char** argv, char** envp)
     puts("********* ADMIN LOGIN PROMPT ***…");
     printf("Enter Username: ");
     fgets(&a_user_name, 256, stdin);
-    int eax_1;
+    int ret;
     if (verify_user_name() != 0)
     {
         puts("nope, incorrect username...\n");
-        eax_1 = 1;
+        ret = 1;
     }
     else
     {
         puts("Enter Password: ");
         fgets(&buffer, 100, stdin);
-        int eax_2 = verify_user_pass(&buffer);
-        if ((eax_2 == 0 || (eax_2 != 0 && eax_2 != 0)))
+        int result = verify_user_pass(&buffer);
+        if ((result == 0 || result != 0))
         {
             puts("nope, incorrect password...\n");
-            eax_1 = 1;
+            ret = 1;
         }
-        if (eax_2 == 0)
-        {
-            eax_1 = 0;
-        }
+        if (result == 0)
+            ret = 0;
     }
-    return eax_1;
+    return ret;
 }
