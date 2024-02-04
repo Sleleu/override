@@ -201,9 +201,9 @@ value = (s[3] ^ 4919) + 6221293;
     return serial != value;
 ```
 
-- `value = (s[3] ^ 4919) + 6221293`: Initializes value with an XOR between the 4th character of the login and 4919, then adds 6221293 to it.
+- `value = (s[3] ^ 4919) + 6221293`: Initializes value with a XOR between the 4th character of the login and 4919, then adds 6221293 to it.
 - `if ( s[i] <= 31 ) return 1;`: Excludes non-printable characters from this login.
-- `value += (value ^ (unsigned int)s[i]) % 1337;`: Adds to `value` the result of an XOR with each character of the login, modulo 1337.
+- `value += (value ^ (unsigned int)s[i]) % 1337;`: Adds to `value` the result of a XOR with each character of the login, modulo 1337.
 
 We will try to break down the program's logic step by step, starting with the login `123456`.
 

